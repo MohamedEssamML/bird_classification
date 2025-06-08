@@ -20,7 +20,7 @@ This project implements a bird species classification system using a fine-tuned 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/bird_classification.git
+   git clone https://github.com/MohamedEssamML/bird_classification
    cd bird_classification
    ```
 2. Create a virtual environment and activate it:
