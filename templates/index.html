@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Species Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bird Species Classification</h1>
+        <h2>Upload Bird Image</h2>
+        <form action="/classify" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Classify</button>
+        </form>
+        
+        <!-- Results -->
+        {% if result %}
+        <h3>Result: {{ result }}</h3>
+        {% endif %}
+        {% if image_url %}
+        <img src="{{ image_url }}" alt="Uploaded Image" width="300">
+        {% endif %}
+    </div>
+</body>
+</html>
